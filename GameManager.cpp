@@ -37,7 +37,7 @@ void GameManager::iniciar()
     for (int i = 1; i <= 9; i++)
     {
         sala = new Sala(numeroSala);
-        if (sala->combate(*player))
+        if (sala->combate(*player)==true)
         {
             if (numeroSala < 9)
             {

@@ -1,4 +1,3 @@
-// Jefe.h
 #pragma once
 #include "Enemigo.h"
 
