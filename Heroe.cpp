@@ -76,7 +76,7 @@ void Heroe::usarHabilidad(int indice, Personaje &objetivo)
 
 void Heroe::usarItem(int indice)
 {
-    if (indice < 0 || indice > inv.size())
+    if (indice < 0 || indice >= inv.size())
     {
         std::cout << "Ingrese un indice valido" << std::endl;
         return;
