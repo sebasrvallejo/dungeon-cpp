@@ -47,7 +47,7 @@ void Heroe::usarHabilidad(int indice, Personaje &objetivo)
         objetivo.recibirDano(hab.valor);
         mostrarMensaje(1, indice);
         if (indice == 1)
-            hab.disponible = false;
+            habilidades[1].disponible = false;
         break;
 
     case TipoHabilidad::CURACION:
