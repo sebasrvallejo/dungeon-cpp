@@ -1,10 +1,11 @@
 #include "Heroe.h"
 #include "Sala.h"
+#include <memory>
 
 class GameManager {
 private:
-    Heroe *player;
-    Sala *sala;
+    std::unique_ptr<Heroe> player;
+    std::unique_ptr<Sala> sala;
     int numeroSala;
 
 public:

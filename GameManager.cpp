@@ -32,11 +32,11 @@ std::string GameManager::crearPlayer()
 void GameManager::iniciar()
 {
     std::string nombrePlayer = crearPlayer();
-    player = new Heroe(nombrePlayer);
+    player = std::make_unique<Heroe>(nombrePlayer);
     std::cout << "numeroSala antes del for: " << numeroSala << std::endl;
     for (int i = 1; i <= 9; i++)
     {
-        sala = new Sala(numeroSala);
+        sala = std::make_unique<Sala>(numeroSala);
         if (sala->combate(*player)==true)
         {
             if (numeroSala < 9)
@@ -54,6 +54,5 @@ void GameManager::iniciar()
             return;
         }
         numeroSala ++;
-        delete(sala);
     }
 }
