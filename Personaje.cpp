@@ -34,8 +34,10 @@ void Personaje::recibirDano(int dano)
         vida = 0;
         vivo = false;
         mostrarMensaje(2, dano);
+    } else{
+        mostrarEstadoPersonaje();
     }
-    mostrarEstadoPersonaje();
+    
 }
 
 void Personaje::activarEscudo() { escudo = true; }
